@@ -33,6 +33,11 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function folders()
+    {
+        return $this->hasMany('App\Models\Folder');
+    }
+
     /**
      * The attributes that should be cast.
      *
